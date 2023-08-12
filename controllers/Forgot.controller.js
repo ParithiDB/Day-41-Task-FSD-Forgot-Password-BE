@@ -15,8 +15,8 @@ forgotRouter.put('/', async (req, res, next) => {
           var transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-              user: "yoyomobiles98@gmail.com",
-              pass: 'yoyoMobiles'
+              user: `${process.env.NODEMAILER_EMAIL_ADDRESS}`,
+              pass: `${process.env.NODEMAILER_PASSWORD}`
             }
           });
           const NODEMAILER_RESET_URL =  `http://localhost:5000/ResetPassword/${randomString}`;
