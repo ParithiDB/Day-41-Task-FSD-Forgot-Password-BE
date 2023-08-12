@@ -19,7 +19,7 @@ forgotRouter.put('/', async (req, res, next) => {
               pass: `${process.env.NODEMAILER_PASSWORD}`
             }
           });
-          const NODEMAILER_RESET_URL =  `http://localhost:5000/ResetPassword/${randomString}`;
+          const NODEMAILER_RESET_URL =  `https://dazzling-pasca-4739f8.netlify.app/ResetPassword/${randomString}`;
           
           var mailOptions = {
             from: '"myself" <yoyomobiles98@gmail.com>',
